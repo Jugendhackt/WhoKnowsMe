@@ -1,10 +1,10 @@
-package main;
+package main.test;
 
 
 import org.junit.Test;
 import java.util.*;
 
-public class testBackendInterface {
+public class AccountServiceTest {
 /*
  	@Test
 
