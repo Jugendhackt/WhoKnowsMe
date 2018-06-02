@@ -6,7 +6,7 @@ public class Account {
 	private String portalName;
 	
 	public Account(Portal p, String userName) {
-		this.url = p.getUrl(userName);
+		this.url = p.getUrl();
 		this.portalName = p.getPortalName();
 	}
 }

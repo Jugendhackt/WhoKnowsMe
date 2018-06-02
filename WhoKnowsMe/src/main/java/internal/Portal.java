@@ -9,9 +9,13 @@ public abstract class Portal {
 		this.portalName = portalName;
 	}
 	
-	public abstract boolean hasAccount(String accountName) throws Exception;
+	public abstract boolean hasAccount() throws Exception;
 	
-	public abstract String getUrl(String accountName);
+	public final String getUrl() {
+		return url;
+	}
 	
-	public abstract String getPortalName();
+	public final String getPortalName() {
+		return portalName;
+	}
 }

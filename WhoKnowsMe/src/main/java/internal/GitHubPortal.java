@@ -6,18 +6,17 @@ import org.jsoup.nodes.Document;
 
 public class GitHubPortal extends Portal {
 
-	public GitHubPortal() {
-		super("https://github.com/", "GitHub");
+	public GitHubPortal(String accountName) {
+		super("https://github.com/"+accountName, "GitHub");
 	}
 
 	@Override
-	public boolean hasAccount(String accountName) throws Exception {
-		String url = "https://github.com/" + accountName + "/";
+	public boolean hasAccount() throws Exception {
 		Document html;
 		try {
-			html = Jsoup.connect(url).get();
+			html = Jsoup.connect(getUrl()).get();
 		} catch (IOException e) {
-			throw new Exception("problem connecting to the webside" + url + e);
+			throw new Exception("problem connecting to the webside" + getUrl() + e);
 		}
 		String htmlString = html.toString();
 		boolean member;
@@ -31,16 +30,4 @@ public class GitHubPortal extends Portal {
 				
 		return member;
 	}
-
-	@Override
-	public String getUrl(String accountName) {
-		return "https://github.com/" + accountName + "/";
-	}
-
-	@Override
-	public String getPortalName() {
-		
-		return "GitHub";
-	}
-
 }

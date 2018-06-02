@@ -27,7 +27,7 @@ public class AccountService {
 		
 		for(Portal p:allPortals) {
 			try {
-				if(p.hasAccount(input)) {
+				if(p.hasAccount()) {
 					allAccounts.add(new Account(p,input));
 				}
 			} catch (Exception e) {
