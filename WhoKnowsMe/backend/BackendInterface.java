@@ -1,4 +1,5 @@
 import java.util.*;
+import internal.*;
 
 public class BackendInterface {
 	/* This is the interface that takes user input and searchs for
@@ -7,6 +8,24 @@ public class BackendInterface {
 	private BackendInterface() {} //no instances can be created
 	
 	public static List<Account> findAccounts(String input) {
-		return null;
+		List<Portal> allPortals = getAllPortals();
+		List<Account> allAccounts = new ArrayList<Account>();	
+		
+		for(Portal p:allPortals) {
+			if(p.hasAccount(input)) {
+				allAccounts.add(new Account(p));
+			}
+		}
+		
+		return allAccounts;
+	}
+	
+	private static List<Portal> getAllPortals() {
+		List<Portal> allPortals = new ArrayList<Portal>();
+		
+		//add here any
+		
+		
+		return allPortals;
 	}
 }
