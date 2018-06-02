@@ -6,7 +6,7 @@ public class BackendInterface {
 
 	private BackendInterface() {} //no instances can be created
 	
-	public List<Account> findAccounts(String input) {
+	public static List<Account> findAccounts(String input) {
 		return null;
 	}
 }
