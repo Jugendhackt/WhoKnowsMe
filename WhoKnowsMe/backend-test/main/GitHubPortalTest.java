@@ -1,3 +1,4 @@
+package main;
 import org.junit.Test;
 
 import internal.GitHubPortal;
