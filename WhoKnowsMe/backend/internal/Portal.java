@@ -8,4 +8,6 @@ public abstract class Portal {
 	public abstract boolean hasAccount(String accountName);
 	
 	public abstract String getUrl();
+	
+	public abstract String getName();
 }
