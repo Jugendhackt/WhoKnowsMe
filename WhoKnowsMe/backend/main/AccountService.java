@@ -1,14 +1,27 @@
 package main;
 import java.util.*;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import internal.*;
 
-public class BackendInterface {
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+@Path("AccountService")
+public class AccountService {
 	/* This is the interface that takes user input and searchs for
 	 * accounts that are named similar */
 
-	private BackendInterface() {} //no instances can be created
+	private AccountService() {} //no instances can be created
 	
-	public static List<Account> findAccounts(String input) {
+	@GET
+	@Path("findAccounts/{input}")
+	public static List<Account> findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals();
 		List<Account> allAccounts = new ArrayList<Account>();	
 		
@@ -25,7 +38,6 @@ public class BackendInterface {
 		List<Portal> allPortals = new ArrayList<Portal>();
 		
 		//add here any
-		
 		
 		return allPortals;
 	}

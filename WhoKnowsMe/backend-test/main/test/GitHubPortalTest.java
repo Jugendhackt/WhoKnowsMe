@@ -1,4 +1,4 @@
-package main;
+package main.test;
 import org.junit.Test;
 
 import internal.GitHubPortal;
