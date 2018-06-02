@@ -1,5 +1,8 @@
 package internal;
+import java.io.IOException;
+
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 public class GitHubPortal extends Portal {
 
@@ -10,11 +13,17 @@ public class GitHubPortal extends Portal {
 	}
 
 	@Override
-	public boolean hasAccount(String accountName) {
+	public boolean hasAccount(String accountName) throws Exception {
 		String url = "https://github.com/" + accountName + "/";
-		String html = Jsoup.connect(url).get;
+		Document html;
+		try {
+			html = Jsoup.connect(url).get();
+		} catch (IOException e) {
+			throw new Exception("problem connecting to the webside" + url + e);
+		}
+		String htmlString = html.toString();
 		boolean member;
-		if(html.contains("Page not found")) {	
+		if(htmlString.contains("Page not found")) {	
 			member=false;
 		}
 		else

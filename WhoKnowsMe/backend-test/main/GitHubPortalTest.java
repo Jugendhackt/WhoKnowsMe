@@ -23,7 +23,13 @@ public class GitHubPortalTest {
 	@Test
 	public void  testHasAccount () {
 		GitHubPortal portal = new GitHubPortal ();
-		Boolean member = portal.hasAccount("Wutchilli");
+		Boolean member = false;
+		try {
+			member = portal.hasAccount("Wutchilli");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Assert.assertTrue(member);
 		
 		

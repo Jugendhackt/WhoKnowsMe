@@ -13,8 +13,13 @@ public class BackendInterface {
 		List<Account> allAccounts = new ArrayList<Account>();	
 		
 		for(Portal p:allPortals) {
-			if(p.hasAccount(input)) {
-				allAccounts.add(new Account(p,input));
+			try {
+				if(p.hasAccount(input)) {
+					allAccounts.add(new Account(p,input));
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 		
