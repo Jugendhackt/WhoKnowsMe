@@ -5,11 +5,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 public class GitHubPortal extends Portal {
+	Portal singlePortal = new GitHubPortal();
 
 	@Override
 	public Portal getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+		return singlePortal;
 	}
 
 	@Override
@@ -41,7 +41,6 @@ public class GitHubPortal extends Portal {
 
 	@Override
 	public String getPortalName() {
-		
 		return "GitHub";
 	}
 

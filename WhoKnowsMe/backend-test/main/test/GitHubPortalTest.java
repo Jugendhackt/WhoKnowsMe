@@ -31,6 +31,13 @@ public class GitHubPortalTest {
 			e.printStackTrace();
 		}
 		Assert.assertTrue(member);
+		try {
+			member = portal.hasAccount("000wasd");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Assert.assertFalse(member);
 		
 		
 		
