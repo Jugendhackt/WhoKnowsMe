@@ -51,8 +51,8 @@ button:active{ background-color: darkblue}
   z-index:110;
   position: relative
 }
-#Suchfeld{
-  font-size: 25px;
+#benutzername{
+  font-size: 28px;
 }
 #bname{
   font-size: 25px;
