@@ -6,10 +6,8 @@ import org.jsoup.nodes.Document;
 
 public class GitHubPortal extends Portal {
 
-	@Override
-	public Portal getInstance() {
-		// TODO Auto-generated method stub
-		return null;
+	public GitHubPortal() {
+		super("https://github.com/", "GitHub");
 	}
 
 	@Override
