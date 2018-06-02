@@ -1,5 +1,4 @@
 function sayHello() {
-  document.getElementById('bname').value = document.getElementById('acount').value;
-  
-  
+    var createnode = document.getElementById("bname").value;
+    document.getElementById("divId").innerHTML = createnode;
 }
