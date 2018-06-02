@@ -13,7 +13,7 @@ public class BackendInterface {
 		
 		for(Portal p:allPortals) {
 			if(p.hasAccount(input)) {
-				allAccounts.add(new Account(p));
+				allAccounts.add(new Account(p,input));
 			}
 		}
 		

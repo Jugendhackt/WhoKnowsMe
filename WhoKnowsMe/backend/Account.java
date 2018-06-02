@@ -4,8 +4,8 @@ public class Account {
 	private String url;
 	private String portalName;
 	
-	public Account(Portal p) {
-		this.url = p.getUrl();
-		this.portalName = p.getName();
+	public Account(Portal p, String userName) {
+		this.url = p.getUrl(userName);
+		this.portalName = p.getPortalName();
 	}
 }
