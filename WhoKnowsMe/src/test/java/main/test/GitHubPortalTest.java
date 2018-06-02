@@ -38,7 +38,7 @@ public class GitHubPortalTest {
 			e.printStackTrace();
 		}
 		Assert.assertFalse(member);
-		
+
 		
 		
 	}
