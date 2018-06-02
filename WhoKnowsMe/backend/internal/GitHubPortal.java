@@ -1,4 +1,5 @@
 package internal;
+import org.jsoup.Jsoup;
 
 public class GitHubPortal extends Portal {
 
@@ -10,13 +11,22 @@ public class GitHubPortal extends Portal {
 
 	@Override
 	public boolean hasAccount(String accountName) {
-		// TODO Auto-generated method stub
-		return false;
+		String url = "https://github.com/" + accountName + "/";
+		String html = Jsoup.connect(url).get;
+		boolean member;
+		if(html.contains("Page not found")) {	
+			member=false;
+		}
+		else
+		{
+			member=true;
+		}
+				
+		return member;
 	}
 
 	@Override
 	public String getUrl(String accountName) {
-		// TODO Auto-generated method stub
 		return "https://github.com/" + accountName + "/";
 	}
 

@@ -19,5 +19,14 @@ public class GitHubPortalTest {
 		String portalName = portal.getPortalName();
 		Assert.assertEquals("GitHub", portalName);
 	}
+	@Test
+	public void  testHasAccount () {
+		GitHubPortal portal = new GitHubPortal ();
+		Boolean member = portal.hasAccount("Wutchilli");
+		Assert.assertTrue(member);
+		
+		
+		
+	}
 
 }
