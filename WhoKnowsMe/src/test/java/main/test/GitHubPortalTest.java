@@ -8,6 +8,12 @@ import internal.GitHubPortal;
 //import junit.framework.Assert;
 
 public class GitHubPortalTest {
+
+	@Test
+	public void testUnitTest() {
+		assertTrue(true);
+	}
+	
 	@Test
 	public void testGetUrl() {
 		//create a portal and get its url
@@ -16,11 +22,11 @@ public class GitHubPortalTest {
 		
 		//test, whether the url is right
 		//Assert.assertEquals("https://github.com/jugendhackt/",url);
-		assertTrue(url.equals("https://github.com/jugendhackt/"));
-		
+		assertTrue(url.equals("https://github.com/jugendhackt/") || url.equals("https://github.com/jugendhackt"));
 	}
+	
 	@Test
-	public void testGetPortalName () {
+	public void testGetPortalName() {
 		GitHubPortal portal = new GitHubPortal(""); //empty, we need no username
 		String portalName = portal.getPortalName();
 		//Assert.assertEquals("GitHub", portalName);
@@ -28,7 +34,7 @@ public class GitHubPortalTest {
 	}
 	
 	@Test
-	public void  testHasAccount () {
+	public void  testHasAccount() {
 		GitHubPortal portal = new GitHubPortal("Wutchilli");
 		Boolean member = false;
 		try {
@@ -37,16 +43,19 @@ public class GitHubPortalTest {
 			e.printStackTrace();
 		}
 		assertTrue(member);
-		
-		//evtl: in neuen Test auslagern (für error testen)
-		//need a second, portal have to know username, in cause of specific url (including username)
-		GitHubPortal portal2 = new GitHubPortal("000wasd");
+	}
+	
+	@Test
+	public void testHasNoAccount() {
+		GitHubPortal portal = new GitHubPortal("000wasd");
+		boolean member = false;
 		try {
-			member = portal2.hasAccount();
+			member = portal.hasAccount();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		assertFalse(member);
 	}
+	
 
 }
