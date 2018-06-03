@@ -1,5 +1,10 @@
 package internal;
 
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 public abstract class Portal {
 	private String url;
 	private String portalName;
@@ -9,9 +14,23 @@ public abstract class Portal {
 		this.portalName = portalName;
 	}
 	
-	public abstract boolean hasAccount(String accountName) throws Exception;
+	public abstract boolean hasAccount() throws Exception;
 	
-	public abstract String getUrl(String accountName);
+	public final String getUrl() {
+		return url;
+	}
 	
-	public abstract String getPortalName();
+	public final String getPortalName() {
+		return portalName;
+	}
+	
+	protected static String getWebsitesHead(String url) throws Exception {
+		Document html;
+		try {
+			html = Jsoup.connect(url).get();
+		} catch (IOException e) {
+			throw new Exception("problem connecting to the webside" + url + e);
+		}
+		return html.toString();
+	}
 }
