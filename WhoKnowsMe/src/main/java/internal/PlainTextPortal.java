@@ -15,7 +15,7 @@ public class PlainTextPortal extends Portal {
 	public boolean hasAccount() throws Exception {
 		String head;
 		try {
-			head = Portal.getWebsitesHead(getUrl());
+			head = Portal.getWebsitesTitle(getUrl());
 		} catch(IOException ex) {
 			throw new Exception("problem connecting to the webside" + getUrl() + ex);
 		}

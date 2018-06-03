@@ -24,7 +24,7 @@ public abstract class Portal {
 		return portalName;
 	}
 	
-	protected static String getWebsitesHead(String url) throws Exception {
+	protected static String getWebsitesTitle(String url) throws Exception {
 		Document html;
 		try {
 			html = Jsoup.connect(url).get();
