@@ -29,23 +29,17 @@ p{
   font-size: 18px;
   color: #1a1a1a;
 }
-button {
-  background-color: #56a659;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 10px;
-}
 #divId{
   font-size: 30px;
   color: #b5d5a8;
 }
-button:hover { background-color: #8FBC8F }
 button:active{ background-color: darkblue}
+
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor:pointer;
+}
 
 #divEbenen{
   z-index:110;
@@ -53,7 +47,32 @@ button:active{ background-color: darkblue}
 }
 #benutzername{
   font-size: 28px;
+  color:white;
+  
 }
 #bname{
   font-size: 25px;
+
+}
+
+button {
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 4px;
+}
+#divreloading {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
