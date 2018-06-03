@@ -6,8 +6,8 @@ public class PlainTextPortal extends Portal {
 	//if this is a substring of the head of the website, condition fails (== no account)
 	private String successCondition;
 
-	public PlainTextPortal(String url, String portalName, String successCondition) {
-		super(url, portalName);
+	public PlainTextPortal(String generalUrl, String accountName, String portalName, String successCondition) {
+		super(createSpecificUrl(generalUrl,accountName), portalName);
 		this.successCondition = successCondition;
 	}
 
@@ -22,4 +22,17 @@ public class PlainTextPortal extends Portal {
 		//TODO: TEST THIS!!!!
 		return head.contains(successCondition); //means, that there is no profile		
 	}
+	
+	public static final String[][] URLS = {
+			{"https://github.com/USER/","GitHub","Page not found"}
+	};
+	
+	//Just a helper method
+	private static String createSpecificUrl(String generalUrl, String accountName) {
+		return generalUrl.replaceAll("USER", accountName);
+	}
+	
+	public static final String[][] PLAIN_TEXT_URLS = {
+			{"https://github.com/USER/","GitHub","Page not found"}
+	};
 }

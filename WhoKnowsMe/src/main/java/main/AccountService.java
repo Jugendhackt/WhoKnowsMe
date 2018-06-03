@@ -23,7 +23,7 @@ public class AccountService {
 	@Path("findAccounts/{input}")
 	public static List<Account> findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals(input);
-		List<Account> allAccounts = new ArrayList<Account>();	
+		List<Account> allAccounts = new ArrayList<Account>();	//empty!
 		
 		for(Portal p:allPortals) {
 			try {
@@ -43,7 +43,11 @@ public class AccountService {
 		List<Portal> allPortals = new ArrayList<Portal>();
 		
 		//add here any
-		allPortals.add(new GitHubPortal(accountName));
+		//allPortals.add(new GitHubPortal(accountName)); //this is test-only by now
+		
+		for(String[] inputSite:PlainTextPortal.PLAIN_TEXT_URLS) {
+			allPortals.add(new PlainTextPortal(inputSite[0],accountName, inputSite[1], inputSite[2]));
+		}
 		
 		return allPortals;
 	}

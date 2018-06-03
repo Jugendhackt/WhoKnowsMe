@@ -2,11 +2,11 @@ package main;
 import internal.Portal;
 
 public class Account {
-	private String url;
-	private String portalName;
+	private Portal portal;
+	private String userName;
 	
 	public Account(Portal p, String userName) {
-		this.url = p.getUrl();
-		this.portalName = p.getPortalName();
+		this.portal = p;
+		this.userName = userName;
 	}
 }
