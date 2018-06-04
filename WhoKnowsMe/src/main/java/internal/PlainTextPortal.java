@@ -19,7 +19,6 @@ public class PlainTextPortal extends Portal {
 		} catch(IOException ex) {
 			throw new Exception("problem connecting to the webside" + getUrl() + ex);
 		}
-		//TODO: TEST THIS!!!!
 		return head.contains(successCondition); //means, that there is no profile		
 	}
 	
@@ -42,10 +41,10 @@ public class PlainTextPortal extends Portal {
 			{"https://www.wattpad.com/user/USER","Wattpad","BenutzerIn nicht gefunden - Wattpad"},
 			{"https://USER.slack.com/","Slack","Es ist ein Fehler aufgetreten ... | Slack"},
 			{"https://discuss.codecademy.com/u/USER/","Codecademy","Codecademy Discuss"},
-			{"https://gitlab.com/","Gitlab","Sign in · GitLab"},
+			{"https://gitlab.com/","Gitlab","Sign in ï¿½ GitLab"},
 			{"https://www.youtube.com/user/USER","YouTube","YouTube"},
-			{"https://www.gutefrage.net/nutzer/USER","Gutefrage","Gutefrage - die größte deutschsprachige Frage-Antwort-Plattform"},
-			{"https://soundcloud.com/USER","Soundcloud","SoundCloud - Hear the world’s sounds"},
+			{"https://www.gutefrage.net/nutzer/USER","Gutefrage","Gutefrage - die grï¿½ï¿½te deutschsprachige Frage-Antwort-Plattform"},
+			{"https://soundcloud.com/USER","Soundcloud","SoundCloud - Hear the worldï¿½s sounds"},
 			{"https://disqus.com/by/USER","Disqus","Page not found (404) - Disqus"}
 			
 				
