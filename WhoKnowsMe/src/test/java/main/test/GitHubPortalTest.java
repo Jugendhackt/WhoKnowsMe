@@ -1,11 +1,8 @@
 package main.test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
-
 import internal.GitHubPortal;
-//import junit.framework.Assert;
 
 public class GitHubPortalTest {
 
@@ -24,7 +21,6 @@ public class GitHubPortalTest {
 		String url = portal.getUrl();
 		
 		//test, whether the url is right
-		//Assert.assertEquals("https://github.com/jugendhackt/",url);
 		assertTrue(url.equals("https://github.com/jugendhackt/") || url.equals("https://github.com/jugendhackt"));
 	}
 	
@@ -34,7 +30,6 @@ public class GitHubPortalTest {
 		
 		GitHubPortal portal = new GitHubPortal(""); //empty, we need no username
 		String portalName = portal.getPortalName();
-		//Assert.assertEquals("GitHub", portalName);
 		assertTrue(portalName.equals("GitHub"));
 	}
 	
@@ -65,6 +60,4 @@ public class GitHubPortalTest {
 		}
 		assertFalse(member);
 	}
-	
-
 }
