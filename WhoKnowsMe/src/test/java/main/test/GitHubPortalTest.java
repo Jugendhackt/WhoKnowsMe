@@ -11,11 +11,14 @@ public class GitHubPortalTest {
 
 	@Test
 	public void testUnitTest() {
+		System.out.println("testing testUnitTest");
 		assertTrue(true);
 	}
 	
 	@Test
 	public void testGetUrl() {
+		System.out.println("testing getUrl");
+		
 		//create a portal and get its url
 		GitHubPortal portal = new GitHubPortal("jugendhackt");
 		String url = portal.getUrl();
@@ -27,6 +30,8 @@ public class GitHubPortalTest {
 	
 	@Test
 	public void testGetPortalName() {
+		System.out.println("testing getPortalName");
+		
 		GitHubPortal portal = new GitHubPortal(""); //empty, we need no username
 		String portalName = portal.getPortalName();
 		//Assert.assertEquals("GitHub", portalName);
@@ -35,6 +40,8 @@ public class GitHubPortalTest {
 	
 	@Test
 	public void  testHasAccount() {
+		System.out.println("testing has account");
+		
 		GitHubPortal portal = new GitHubPortal("Wutchilli");
 		Boolean member = false;
 		try {
@@ -47,6 +54,8 @@ public class GitHubPortalTest {
 	
 	@Test
 	public void testHasNoAccount() {
+		System.out.println("testing has no account");
+		
 		GitHubPortal portal = new GitHubPortal("000wasd");
 		boolean member = false;
 		try {

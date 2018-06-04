@@ -24,13 +24,9 @@ public abstract class Portal {
 		return portalName;
 	}
 	
-	protected static String getWebsitesTitle(String url) throws Exception {
+	protected static String getWebsitesTitle(String url) throws IOException {
 		Document html;
-		try {
-			html = Jsoup.connect(url).get();
-		} catch (IOException e) {
-			throw new Exception("problem connecting to the webside" + url + e);
-		}
+		html = Jsoup.connect(url).get();
 		return html.toString();
 	}
 }
