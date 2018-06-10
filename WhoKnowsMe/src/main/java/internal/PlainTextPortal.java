@@ -19,7 +19,7 @@ public class PlainTextPortal extends Portal {
 		} catch(IOException ex) {
 			throw new Exception("problem connecting to the webside" + getUrl() + ex);
 		}
-		return head.contains(successCondition); //means, that there is no profile		
+		return !head.contains(successCondition); //means, that there is no profile		
 	}
 	
 	public static final String[][] URLS = {
