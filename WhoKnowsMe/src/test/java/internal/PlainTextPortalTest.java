@@ -18,17 +18,17 @@ public class PlainTextPortalTest {
 		}
 		assertTrue(member);
 	}
-	@Test
-	public void testhasnoAccount() {
-		PlainTextPortal portal = new PlainTextPortal("s", "s", "s","s");
-		Boolean member = false;
-		try {
-			member = portal.hasAccount();
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-		assertFalse(member);	
-	}
+	  @Test
+	    public void testhasnoAccount() {
+	        PlainTextPortal portal = new PlainTextPortal("https://github.com/USER/", "Jugendhackt", "GitHub","Jugend hackt");
+	        Boolean member = false;
+	        try {
+	            member = portal.hasAccount();
+	        } catch (Exception e) {
+	            
+	            e.printStackTrace();
+	        }
+	        assertFalse(member);    
+	    }
 
 }
