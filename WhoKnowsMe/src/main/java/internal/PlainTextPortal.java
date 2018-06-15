@@ -48,6 +48,6 @@ public class PlainTextPortal extends Portal {
 			{"https://disqus.com/by/USER","Disqus","Page not found (404) - Disqus"}
 			
 				
-				
+			
 	};
 }
