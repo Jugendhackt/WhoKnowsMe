@@ -23,6 +23,7 @@ public class AccountService {
 	
 	@GET
 	@Path("findAccounts/{input}")
+	@Produces("application/json")
 	public static JSONArray findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
