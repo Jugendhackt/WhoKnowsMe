@@ -8,6 +8,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.json.JSONArray;
+
 import internal.*;
 
 @Consumes(MediaType.APPLICATION_JSON)
@@ -21,7 +23,7 @@ public class AccountService {
 	
 	@GET
 	@Path("findAccounts/{input}")
-	public static List<Account> findAccounts(@PathParam("input") String input) {
+	public static JSONArray findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
 		
@@ -35,8 +37,7 @@ public class AccountService {
 			}
 		}
 		
-//		return Account.jsonAccountList(allAccounts);
-		return allAccounts;
+		return Account.jsonAccountList(allAccounts);
 	}
 	
 	private static List<Portal> getAllPortals(String accountName) {
