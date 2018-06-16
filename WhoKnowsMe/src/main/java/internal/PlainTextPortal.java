@@ -45,9 +45,15 @@ public class PlainTextPortal extends Portal {
 			{"https://www.youtube.com/user/USER","YouTube","YouTube"},
 			{"https://www.gutefrage.net/nutzer/USER","Gutefrage","Gutefrage - die gr��te deutschsprachige Frage-Antwort-Plattform"},
 			{"https://soundcloud.com/USER","Soundcloud","SoundCloud - Hear the world�s sounds"},
-			{"https://disqus.com/by/USER","Disqus","Page not found (404) - Disqus"}
-			
-				
+			{"https://disqus.com/by/USER","Disqus","Page not found (404) - Disqus"},
+			{"https://USER.slack.com","Slack","Es ist ein Fehler aufgetreten...|Slack"},
+			{"https://www.minecraftforum.net/members/USER/","Minecraft Forum","Not found - Minecraft Forum"},//possible not working (Site got a DDoS protection))
+			{"https://9gag.com/u/USER","9GAG","9GAG - 404 Nothing here"},
+			{"https://USER.tumblr.com/","Tumblr","Not found."},
+			{"https://USER.bandcamp.com/","Bandcamp","Signup | Bandcamp"},
+			//{"https://community.zeit.de/user/USER","Zeit",""}	title dont change 
+			{"https://boards.euw.leagueoflegends.com/de/player/EUW/USER","League of Legendes","League of Legendes"},// only EuWest for now
+			{}	
 			
 	};
 }
