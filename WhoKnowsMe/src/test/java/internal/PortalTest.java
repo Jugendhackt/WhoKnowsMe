@@ -1,17 +1,18 @@
 package internal;
 
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
+import internal.Portal;
+
 public class PortalTest {
-	
+
 	@Test
-	public void testGetWebsitesTitle() throws Exception {
-		System.out.println("testing getWebsitesTitle");
-		
-		String title = Portal.getWebsitesTitle("https://github.com/asqiir"); //get the title
-		
-//		String githubstitle = 
-		
-//		assertTrue(title.equals(githubstitle));
+	public void getWebsideTitleTest() throws Exception {
+		String title = Portal.getWebsitesTitle("https://example.com/");
+		System.out.println(title);
+		assertTrue(title.equals("Example Domain"));
 	}
+
 }

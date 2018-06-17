@@ -21,8 +21,8 @@ public class Account {
 		
 		for(Account acc:accList) {
 			JSONObject jsObj = new JSONObject();
-			jsObj.put("name", acc.userName);
-			jsObj.put("portal", acc.portal);
+			jsObj.put("url", acc.portal.getUrl());
+			jsObj.put("name", acc.portal.getPortalName());
 			
 			jsArr.put(jsObj);
 		}
