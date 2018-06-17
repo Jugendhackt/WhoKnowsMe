@@ -8,7 +8,6 @@ import internal.*;
 
 public class AccountTest {
 
-	
 	@Test
 	public void testJSONAccountList() {
 		List<Account> accs = new ArrayList<Account>();
