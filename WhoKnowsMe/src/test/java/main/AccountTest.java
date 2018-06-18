@@ -11,8 +11,8 @@ public class AccountTest {
 	@Test
 	public void testJSONAccountList() {
 		List<Account> accs = new ArrayList<Account>();
-		accs.add(new Account(new TestPortal("example.com", "COM"), "test"));
-		accs.add(new Account(new TestPortal("example.net", "NET"), "test"));
+		accs.add(new Account("example.com", "COM"));
+		accs.add(new Account("example.net", "NET"));
 		
 		JSONArray result = Account.jsonAccountList(accs);
 		

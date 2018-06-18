@@ -8,12 +8,12 @@ import org.json.JSONObject;
 import internal.Portal;
 
 public class Account {
-	private Portal portal;
-	private String userName;
+	private String profileURL;
+	private String portalName;
 	
-	public Account(Portal p, String userName) {
-		this.portal = p;
-		this.userName = userName;
+	public Account(String url, String portalName) {
+		this.profileURL = url;
+		this.portalName = portalName;
 	}
 	
 	public static JSONArray jsonAccountList(List<Account> accList) {
@@ -21,8 +21,8 @@ public class Account {
 		
 		for(Account acc:accList) {
 			JSONObject jsObj = new JSONObject();
-			jsObj.put("url", acc.portal.getUrl());
-			jsObj.put("name", acc.portal.getPortalName());
+			jsObj.put("url", acc.profileURL);
+			jsObj.put("name", acc.portalName);
 			
 			jsArr.put(jsObj);
 		}
