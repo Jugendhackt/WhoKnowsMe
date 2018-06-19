@@ -5,8 +5,6 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import internal.Portal;
-
 public class Account {
 	private String profileURL;
 	private String portalName;

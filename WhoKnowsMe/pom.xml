@@ -59,6 +59,9 @@
 			<artifactId>json</artifactId>
 			<version>20180130</version>
 		</dependency>
+
+		
+
 	</dependencies>
 
 	<build>
@@ -68,17 +71,11 @@
 			<plugin>
 
 				<artifactId>maven-compiler-plugin</artifactId>
-
 				<version>3.7.0</version>
-
 				<configuration>
-
 					<fork>true</fork>
-
 					<source>1.8</source>
-
 					<target>1.8</target>
-
 				</configuration>
 
 			</plugin>
@@ -86,9 +83,20 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
+					<webXml>WebContent\WEB-INF\web.xml</webXml>
 					<warSourceDirectory>WebContent</warSourceDirectory>
-					<packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
+					<packagingIncludes>WebContent/WEB-INF/lib/*.jar</packagingIncludes>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat8-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<port>8080</port>
+					<path>/</path>
 				</configuration>
 			</plugin>
 		</plugins>
