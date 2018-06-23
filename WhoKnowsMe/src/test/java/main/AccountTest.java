@@ -3,6 +3,9 @@ package main;
 import static org.junit.Assert.assertTrue;
 import java.util.*;
 import org.junit.*;
+
+import internal.Account;
+
 import org.json.*;
 
 public class AccountTest {

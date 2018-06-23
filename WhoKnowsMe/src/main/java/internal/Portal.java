@@ -1,6 +1,8 @@
 package internal;
 
 import java.io.*;
+import java.util.List;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
