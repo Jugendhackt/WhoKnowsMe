@@ -25,10 +25,14 @@ public class PortalFactory {
 		return null;
 	}
 	
-	private static void createPlainTextPortals(String accountName, JSONArray json) {
+	static void createPlainTextPortals(String accountName, JSONArray json) {
 		for(Object obj:json) {
 			JSONObject jsObj = (JSONObject) obj; //does this work?
 			allPortals.add(new PlainTextPortal(jsObj.getString("generalUrl"),accountName, jsObj.getString("portalName"), jsObj.getString("successCondition")));
 		}
+	}
+	
+	static void reset() {
+		allPortals = new ArrayList<Portal>();
 	}
 }
