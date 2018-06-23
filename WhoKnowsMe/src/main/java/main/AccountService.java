@@ -17,11 +17,11 @@ public class AccountService {
 	/* This is the interface that takes user input and searchs for
 	 * accounts that are named similar */
 
-	private AccountService() {} //no instances can be created
+	//private AccountService() {} //no instances can be created
 	
 	@GET
 	@Produces("text/plain")
-	public static String testAccess() {
+	public String testAccess() {
 		return "Hello World!";
 	}
 	
@@ -29,7 +29,7 @@ public class AccountService {
 	@Path("findAccounts/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
 //	@Produces("application/json")
-	public static JSONArray findAccounts(@PathParam("input") String input) {
+	public JSONArray findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
 		

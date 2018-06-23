@@ -83,10 +83,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-					<webXml>WebContent\WEB-INF\web.xml</webXml>
-					<warSourceDirectory>WebContent</warSourceDirectory>
-					<packagingIncludes>WebContent/WEB-INF/lib/*.jar</packagingIncludes>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 
