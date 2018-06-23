@@ -9,7 +9,9 @@ import javax.ws.rs.core.MediaType;
 
 import org.json.JSONArray;
 
-import internal.*;
+import internal.Portal;
+import internal.PortalFactory;
+import internal.Account;
 
 @Path("/AccountService")
 public class AccountService {
@@ -21,7 +23,7 @@ public class AccountService {
 	@Path("findAccounts/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public JSONArray findAccounts(@PathParam("input") String input) {
-		List<Portal> allPortals = getAllPortals(input);
+		List<Portal> allPortals = PortalFactory.createPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
 		
 		for(Portal p:allPortals) {
@@ -35,16 +37,5 @@ public class AccountService {
 		}
 		
 		return Account.jsonAccountList(allAccounts);
-	}
-	
-	private static List<Portal> getAllPortals(String accountName) {
-		List<Portal> allPortals = new ArrayList<Portal>();
-		
-		//add here any
-		for(String[] inputSite:PlainTextPortal.PLAIN_TEXT_URLS) {
-			allPortals.add(new PlainTextPortal(inputSite[0],accountName, inputSite[1], inputSite[2]));
-		}
-		
-		return allPortals;
 	}
 }
