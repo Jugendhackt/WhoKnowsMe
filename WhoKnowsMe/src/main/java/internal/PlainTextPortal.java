@@ -1,11 +1,11 @@
 package internal;
 
 import java.io.IOException;
-import java.util.List;
 
 public class PlainTextPortal extends Portal {
 	//if this is a substring of the head of the website, condition fails (== no account)
 	private String successCondition;
+	public static final String PLACE_HOLDER = "USER";
 
 	public PlainTextPortal(String generalUrl, String accountName, String portalName, String successCondition) {
 		super(createSpecificUrl(generalUrl,accountName), portalName);
@@ -25,7 +25,7 @@ public class PlainTextPortal extends Portal {
 	
 	//Just a helper method
 	private static String createSpecificUrl(String generalUrl, String accountName) {
-		return generalUrl.replaceAll("USER", accountName);
+		return generalUrl.replaceAll(PLACE_HOLDER, accountName);
 	}	
 	
 	public static final String[][] PLAIN_TEXT_URLS = {

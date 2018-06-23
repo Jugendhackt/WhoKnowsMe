@@ -1,7 +1,6 @@
 package internal;
 
 import java.io.*;
-import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -25,7 +24,7 @@ public abstract class Portal {
 		return portalName;
 	}
 	
-	public static String getWebsitesTitle(String url) throws IOException {
+	protected static String getWebsitesTitle(String url) throws IOException {
 		Document htmlDoc = Jsoup.connect(url).get();
 		return htmlDoc.title();
 	}
