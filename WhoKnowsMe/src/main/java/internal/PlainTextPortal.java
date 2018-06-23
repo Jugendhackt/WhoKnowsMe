@@ -1,6 +1,7 @@
 package internal;
 
 import java.io.IOException;
+import java.util.List;
 
 public class PlainTextPortal extends Portal {
 	//if this is a substring of the head of the website, condition fails (== no account)
@@ -22,14 +23,10 @@ public class PlainTextPortal extends Portal {
 		return !head.contains(successCondition); //means, that there is no profile		
 	}
 	
-	public static final String[][] URLS = {
-			{"https://github.com/USER/","GitHub","Page not found"}
-	};
-	
 	//Just a helper method
 	private static String createSpecificUrl(String generalUrl, String accountName) {
 		return generalUrl.replaceAll("USER", accountName);
-	}
+	}	
 	
 	public static final String[][] PLAIN_TEXT_URLS = {
 			{"https://github.com/USER/","GitHub","Page not found"},
