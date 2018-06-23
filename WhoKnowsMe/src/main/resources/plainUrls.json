@@ -1,0 +1,98 @@
+[
+{
+"generalUrl" :"https://github.com/USER/",
+"portalName" :"GitHub",
+"successCondition":"Page not found"
+},
+{
+"generalUrl" :"https://twitter.com/USER/",
+"portalName" :"Twitter",
+"successCondition":"Twitter / ?"
+},
+{
+"generalUrl" :"https://www.instagram.com/USER/",
+"portalName" :"Instagram",
+"successCondition":"Seite nicht gefunden &bull; Instagram"
+},
+{
+"generalUrl" :"https://www.deviantart.com/USER/",
+"portalName" :"Deviantart",
+"successCondition":"Browse  on DeviantArt"
+},
+{
+"generalUrl" :"https://pixabay.com/users/USER/",
+"portalName" :"Pixabay",
+"successCondition":"Error 404"
+},
+{
+"generalUrl" :"https://www.fanfiktion.de/u/USER",
+"portalName" :"FanfiktionDE",
+"successCondition":"Benutzerprofil nicht gefunden | FanFiktion.de"
+},
+{
+"generalUrl" :"https://www.wattpad.com/user/USER",
+"portalName" :"Wattpad",
+"successCondition":"BenutzerIn nicht gefunden - Wattpad"
+},
+{
+"generalUrl" :"https://USER.slack.com/",
+"portalName" :"Slack",
+"successCondition":"Es ist ein Fehler aufgetreten ... | Slack"
+},
+{
+"generalUrl" :"https://discuss.codecademy.com/u/USER/",
+"portalName" :"CodeCademy",
+"successCondition":"Codecademy Discuss"
+},
+{
+"generalUrl" :"https://gitlab.com/",
+"portalName" :"GitLab",
+"successCondition":"Sign in ï¿½ GitLab"
+},
+{
+"generalUrl" :"https://www.youtube.com/user/USER",
+"portalName" :"Youtube",
+"successCondition":"YouTube"
+},
+{
+"generalUrl" :"https://www.gutefrage.net/nutzer/USER",
+"portalName" :"Gutefrage",
+"successCondition":"Gutefrage - die grï¿½ï¿½te deutschsprachige Frage-Antwort-Plattform"
+},
+{
+"generalUrl" :"https://soundcloud.com/USER",
+"portalName" :"SoundCloud",
+"successCondition":"SoundCloud - Hear the worldï¿½s sounds"
+},
+{
+"generalUrl" :"https://disqus.com/by/USER",
+"portalName" :"Disqus",
+"successCondition":"Page not found (404) - Disqus"
+},
+{
+"generalUrl" :"https://www.minecraftforum.net/members/USER/",
+"portalName" :"Minecraft Forum",
+"successCondition":"Not found - Minecraft Forum"
+},
+{
+"generalUrl" :"https://9gag.com/u/USER",
+"portalName" :"9GAG",
+"successCondition":"9GAG - 404 Nothing here"
+},
+{
+"generalUrl" :"https://USER.tumblr.com/",
+"portalName" :"Tumblr",
+"successCondition":"Not found."
+},
+{
+"generalUrl" :"https://USER.bandcamp.com/",
+"portalName" :"Bandcamp",
+"successCondition":"Signup | Bandcamp"
+},
+{
+"generalUrl" :"https://boards.euw.leagueoflegends.com/de/player/EUW/USER",
+"portalName" :"League of Legendes",
+"successCondition":"League of Legendes"
+}
+
+]
