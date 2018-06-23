@@ -1,6 +1,3 @@
-
-
-
 jQuery(function() {
 
 function start() {
@@ -13,7 +10,7 @@ function start() {
 	var input = escape(jQuery('#username').val());
 
 	//3) Anfrage senden (findAccounts/EINGABE)
-	jQuery.getJSON('findAccounts/'+input, runRequest);
+	jQuery.getJSON('services/AccountService/findAccounts/'+input, runRequest);
 }
 	
 var runRequest = function(json) {

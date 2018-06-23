@@ -11,7 +11,6 @@ public class PortalTest {
 	@Test
 	public void getWebsideTitleTest() throws Exception {
 		String title = Portal.getWebsitesTitle("https://example.com/");
-		System.out.println(title);
 		assertTrue(title.equals("Example Domain"));
 	}
 

@@ -11,24 +11,15 @@ import org.json.JSONArray;
 
 import internal.*;
 
-//@Produces(MediaType.APPLICATION_JSON)
 @Path("/AccountService")
 public class AccountService {
 	/* This is the interface that takes user input and searchs for
 	 * accounts that are named similar */
 
-	//private AccountService() {} //no instances can be created
-	
-	@GET
-	@Produces("text/plain")
-	public String testAccess() {
-		return "Hello World!";
-	}
 	
 	@GET
 	@Path("findAccounts/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
-//	@Produces("application/json")
 	public JSONArray findAccounts(@PathParam("input") String input) {
 		List<Portal> allPortals = getAllPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
