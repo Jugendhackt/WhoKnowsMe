@@ -7,20 +7,23 @@ function start() {
 	var input = escape(jQuery('#username').val());
 
 	//3) Anfrage senden (findAccounts/EINGABE)
-	jQuery.getJSON('services/AccountService/serve/'+input, runRequest);
+	jQuery.getJSON('services/AccountService/serve/'+input, runRequest(input));
 }
 	
-var runRequest = function(json) {
-	//4) antwort (json) in liste umformen
-	var list = createList(json);
-
-
-	//5) output.innerHTML durch Liste ersetzen
-	jQuery('#output').empty();
-	jQuery('#output').append(createSubheader());
-	jQuery('#output').append(list);
+var runRequest = function(accountname) {
+	var subheader = createSubheader(accountname);
 	
+	return function(json) {
+		//4) antwort (json) in liste umformen
+		var list = createList(json);
+
+		//5) output.innerHTML durch Liste ersetzen
+		jQuery('#output').empty();
+		jQuery('#output').append(subheader);
+		jQuery('#output').append(list);
+	};
 };
+	
 
 
 
@@ -42,9 +45,9 @@ jQuery('#submit').click(function() {
 
 //====HELPER=FUNCTIONS========
 
-function createSubheader() {
+function createSubheader(accountname) {
 	var subheader = document.createElement('h2');
-	subheader.innerHTML = "There are accounts at:";
+	subheader.innerHTML = 'There are accounts for "' + accountname + '" at:"';
 	return subheader;
 }
 
