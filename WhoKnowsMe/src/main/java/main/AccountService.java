@@ -31,7 +31,7 @@ public class AccountService {
 	}
 
 	
-	List<Account> findAccounts(List<Portal> allPortals) {
+	static List<Account> findAccounts(List<Portal> allPortals) {
 		List<Account> allAccounts = new ArrayList<Account>(); // empty!
 
 		for (Portal p : allPortals) {

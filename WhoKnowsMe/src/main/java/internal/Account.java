@@ -27,4 +27,35 @@ public class Account {
 		
 		return jsArr;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((portalName == null) ? 0 : portalName.hashCode());
+		result = prime * result + ((profileURL == null) ? 0 : profileURL.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (!(obj instanceof Account))
+			return false;
+		Account other = (Account) obj;
+		if (portalName == null) {
+			if (other.portalName != null)
+				return false;
+		} else if (!portalName.equals(other.portalName))
+			return false;
+		if (profileURL == null) {
+			if (other.profileURL != null)
+				return false;
+		} else if (!profileURL.equals(other.profileURL))
+			return false;
+		return true;
+	}
 }
