@@ -11,6 +11,7 @@
 		<version.jersey>2.27</version.jersey>
 		<version.servlet.api>3.1.0</version.servlet.api>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.test.skip>false</maven.test.skip>
 	</properties>
 
 	<dependencies>

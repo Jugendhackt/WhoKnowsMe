@@ -9,7 +9,7 @@ import internal.Portal;
 public class PortalTest {
 
 	@Test
-	public void getWebsideTitleTest() throws Exception {
+	public void testGetWebsitesTitle() throws Exception {
 		String title = Portal.getWebsitesTitle("https://example.com/");
 		assertTrue(title.equals("Example Domain"));
 	}
