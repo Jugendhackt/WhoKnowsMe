@@ -1,4 +1,5 @@
 package main;
+
 import java.util.*;
 
 import javax.ws.rs.GET;
@@ -15,27 +16,33 @@ import internal.Account;
 
 @Path("/AccountService")
 public class AccountService {
-	/* This is the interface that takes user input and searchs for
-	 * accounts that are named similar */
+	/*
+	 * This is the interface that takes user input and searchs for accounts that are
+	 * named similar
+	 */
+
+	@GET
+	@Path("serve/{input}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public JSONArray serve(@PathParam("input") String input) {
+		List<Portal> allPortals = PortalFactory.loadPortals(input);
+
+		return Account.jsonAccountList(findAccounts(allPortals));
+	}
 
 	
-	@GET
-	@Path("findAccounts/{input}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public JSONArray findAccounts(@PathParam("input") String input) {
-		List<Portal> allPortals = PortalFactory.loadPortals(input);
-		List<Account> allAccounts = new ArrayList<Account>();	//empty!
-		
-		for(Portal p:allPortals) {
+	List<Account> findAccounts(List<Portal> allPortals) {
+		List<Account> allAccounts = new ArrayList<Account>(); // empty!
+
+		for (Portal p : allPortals) {
 			try {
-				if(p.hasAccount()) {
-					allAccounts.add(new Account(p.getUrl(),p.getPortalName()));
+				if (p.hasAccount()) {
+					allAccounts.add(new Account(p.getUrl(), p.getPortalName()));
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
-		
-		return Account.jsonAccountList(allAccounts);
+		return allAccounts;
 	}
 }

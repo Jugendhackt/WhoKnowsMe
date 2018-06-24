@@ -10,7 +10,7 @@ function start() {
 	var input = escape(jQuery('#username').val());
 
 	//3) Anfrage senden (findAccounts/EINGABE)
-	jQuery.getJSON('services/AccountService/findAccounts/'+input, runRequest);
+	jQuery.getJSON('services/AccountService/serve/'+input, runRequest);
 }
 	
 var runRequest = function(json) {
