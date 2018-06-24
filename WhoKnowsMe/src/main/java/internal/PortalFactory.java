@@ -33,6 +33,6 @@ public class PortalFactory {
 	}
 	
 	static void reset() {
-		allPortals = new ArrayList<Portal>();
+		allPortals = new ArrayList<Portal>(); //so loadPortals will load any again
 	}
 }
