@@ -30,10 +30,10 @@ public class PortalFactoryTest {
 	
 	@Test
 	public void testCreatePlainTextPortals() {
-		PortalFactory.reset();
-		PortalFactory.createPlainTextPortals("me", createReferenceJSON());
+		PortalFactory pf = new PortalFactory();
+		pf.createPlainTextPortals("me", createReferenceJSON());
 		
-		List<Portal> portals = PortalFactory.loadPortals("me");
+		List<Portal> portals = pf.loadPortals("me");
 		
 		List<Portal> reference = new ArrayList<Portal>();
 		reference.add(new PlainTextPortal("https://github.com/USER","me","GitHub","Page not found"));

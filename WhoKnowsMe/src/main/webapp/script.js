@@ -6,7 +6,7 @@ function start() {
 	const output = jQuery('#output');
 
 	//1) output mit Ladebalken ersetzen (optional)
-	output.empty();
+	
 	//2) Eingabe auslesen //wenn eingabe leer, hier abbrechen (aber ladebalken wieder entfernen)
 	var input = escape(jQuery('#username').val());
 
@@ -20,6 +20,7 @@ var runRequest = function(json) {
 
 
 	//5) output.innerHTML durch Liste ersetzen
+	output.empty();
 	jQuery('#output').append(list);
 	
 };
