@@ -14,7 +14,7 @@ public class PortalFactoryTest {
 	public JSONArray createReferenceJSON() {
 		JSONArray compare = new JSONArray();
 		JSONObject node = new JSONObject();
-		node.put("generalUrl", "https://jugendhackt/USER");
+		node.put("generalUrl", "https://github.com/USER");
 		node.put("portalName", "GitHub");
 		node.put("successCondition", "Page not found");
 		compare.put(node);
@@ -25,7 +25,7 @@ public class PortalFactoryTest {
 	@Test
 	public void testCreateJSON() {
 		JSONArray fromFile = PortalFactory.createJSON("test.json");
-		assertTrue(fromFile.equals(createReferenceJSON()));
+		assertTrue(fromFile.toString().equals(createReferenceJSON().toString()));
 	}
 	
 	@Test
@@ -36,7 +36,7 @@ public class PortalFactoryTest {
 		List<Portal> portals = PortalFactory.loadPortals("me");
 		
 		List<Portal> reference = new ArrayList<Portal>();
-		reference.add(new PlainTextPortal("https://jugendhackt/USER","me","GitHub","Page not found"));
+		reference.add(new PlainTextPortal("https://github.com/USER","me","GitHub","Page not found"));
 		
 		assertTrue(portals.equals(reference));
 	}
