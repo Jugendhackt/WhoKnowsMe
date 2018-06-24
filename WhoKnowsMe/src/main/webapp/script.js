@@ -1,10 +1,6 @@
 jQuery(function() {
 
 function start() {
-	//jQuery('#output').html('<p>test worked</p>'); //change inner stuff test
-
-	const output = jQuery('#output');
-
 	//1) output mit Ladebalken ersetzen (optional)
 	
 	//2) Eingabe auslesen //wenn eingabe leer, hier abbrechen (aber ladebalken wieder entfernen)
@@ -20,7 +16,7 @@ var runRequest = function(json) {
 
 
 	//5) output.innerHTML durch Liste ersetzen
-	output.empty();
+	jQuery('#output').empty();
 	jQuery('#output').append(list);
 	
 };
