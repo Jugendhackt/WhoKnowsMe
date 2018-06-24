@@ -2,9 +2,12 @@ jQuery(function() {
 
 function start() {
 	//1) output mit Ladebalken ersetzen (optional)
+	var reloading = document.createElement('div');
+	reloading.setAttribute('id','reloading');
+	jQuery('#output').prepend(reloading);
 	
 	//2) Eingabe auslesen //wenn eingabe leer, hier abbrechen (aber ladebalken wieder entfernen)
-	var input = escape(jQuery('#username').val());
+	var input = jQuery('#username').val();
 
 	//3) Anfrage senden (findAccounts/EINGABE)
 	jQuery.getJSON('services/AccountService/serve/'+input, runRequest(input));
