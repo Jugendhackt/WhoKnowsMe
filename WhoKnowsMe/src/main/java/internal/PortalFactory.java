@@ -39,7 +39,7 @@ public class PortalFactory {
 		}
 	}
 
-	static void reset() {
+	public static void reset() {
 		allPortals = new ArrayList<Portal>(); // so loadPortals will load any again
 	}
 }

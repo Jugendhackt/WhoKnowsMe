@@ -23,6 +23,7 @@ public class AccountService {
 	@Path("serve/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String serve(@PathParam("input") String input) {
+		PortalFactory.reset();
 		List<Portal> allPortals = PortalFactory.loadPortals(input);
 
 		return Account.jsonAccountList(findAccounts(allPortals)).toString();
