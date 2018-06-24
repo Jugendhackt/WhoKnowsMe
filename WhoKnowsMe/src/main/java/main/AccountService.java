@@ -8,8 +8,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.json.JSONArray;
-
 import internal.Portal;
 import internal.PortalFactory;
 import internal.Account;
@@ -24,10 +22,10 @@ public class AccountService {
 	@GET
 	@Path("serve/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public JSONArray serve(@PathParam("input") String input) {
+	public String serve(@PathParam("input") String input) {
 		List<Portal> allPortals = PortalFactory.loadPortals(input);
 
-		return Account.jsonAccountList(findAccounts(allPortals));
+		return Account.jsonAccountList(findAccounts(allPortals)).toString();
 	}
 
 	
