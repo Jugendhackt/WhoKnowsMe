@@ -11,7 +11,7 @@ public class PortalFactory {
 	private static final String PLAIN_TEXT_URLS_JSON_FILE = "plainUrls.json";
 	
 	
-	public static List<Portal> createPortals(String accountName) {
+	public static List<Portal> loadPortals(String accountName) {
 		if(allPortals.isEmpty()) {
 			//add here any
 			createPlainTextPortals(accountName, createJSON(PLAIN_TEXT_URLS_JSON_FILE));			

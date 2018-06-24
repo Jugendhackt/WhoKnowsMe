@@ -23,7 +23,7 @@ public class AccountService {
 	@Path("findAccounts/{input}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public JSONArray findAccounts(@PathParam("input") String input) {
-		List<Portal> allPortals = PortalFactory.createPortals(input);
+		List<Portal> allPortals = PortalFactory.loadPortals(input);
 		List<Account> allAccounts = new ArrayList<Account>();	//empty!
 		
 		for(Portal p:allPortals) {

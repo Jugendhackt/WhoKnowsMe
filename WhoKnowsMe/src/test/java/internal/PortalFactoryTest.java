@@ -33,7 +33,7 @@ public class PortalFactoryTest {
 		PortalFactory.reset();
 		PortalFactory.createPlainTextPortals("me", createReferenceJSON());
 		
-		List<Portal> portals = PortalFactory.createPortals("me");
+		List<Portal> portals = PortalFactory.loadPortals("me");
 		
 		List<Portal> reference = new ArrayList<Portal>();
 		reference.add(new PlainTextPortal("https://jugendhackt/USER","me","GitHub","Page not found"));
