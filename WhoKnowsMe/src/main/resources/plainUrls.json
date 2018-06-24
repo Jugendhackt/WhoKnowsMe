@@ -45,11 +45,6 @@
 "successCondition":"Codecademy Discuss"
 },
 {
-"generalUrl" :"https://gitlab.com/",
-"portalName" :"GitLab",
-"successCondition":"Sign in ï¿½ GitLab"
-},
-{
 "generalUrl" :"https://www.youtube.com/user/USER",
 "portalName" :"Youtube",
 "successCondition":"YouTube"

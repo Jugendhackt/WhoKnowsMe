@@ -17,6 +17,7 @@ var runRequest = function(json) {
 
 	//5) output.innerHTML durch Liste ersetzen
 	jQuery('#output').empty();
+	jQuery('#output').append(createSubheader());
 	jQuery('#output').append(list);
 	
 };
@@ -41,20 +42,25 @@ jQuery('#submit').click(function() {
 
 //====HELPER=FUNCTIONS========
 
+function createSubheader() {
+	var subheader = document.createElement('h2');
+	subheader.innerHTML = "There are accounts at:";
+	return subheader;
+}
+
 function createList(json) {
 	//take the json,
-	//return somthing like this structur (but as nodes, not as string)
+	//return something like this structure (but as nodes, not as string)
 
 	//<ul>
 	// <li><a href="URL">account</a> on PORTAL_NAME</li>
-	// //mehr list-elemente
 	//</ul>
 
 	var list = document.createElement('ul');
 
 	for(var acc in json) {
 		var listPoint = document.createElement('li');
-		listPoint.innerHTML = 'There is an <a href="' + json[acc].url + '">account</a> at ' + json[acc].name;
+		listPoint.innerHTML = '<a href="' + json[acc].url + '">' + json[acc].name + '</a>';
 		list.append(listPoint);
 	}
 
