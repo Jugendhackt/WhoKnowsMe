@@ -75,11 +75,6 @@
 "successCondition":"9GAG - 404 Nothing here"
 },
 {
-"generalUrl" :"https://USER.tumblr.com/",
-"portalName" :"Tumblr",
-"successCondition":"Not found."
-},
-{
 "generalUrl" :"https://USER.bandcamp.com/",
 "portalName" :"Bandcamp",
 "successCondition":"Signup | Bandcamp"
