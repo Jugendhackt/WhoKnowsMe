@@ -14,7 +14,7 @@ function start() {
 }
 	
 var runRequest = function(accountname) {
-	var subheader = createSubheader(accountname);
+	var subheader = createSubheader(unescape(accountname));
 	
 	return function(json) {
 		//4) antwort (json) in liste umformen
