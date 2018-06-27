@@ -14,7 +14,7 @@ public class PlainTextPortal extends Portal {
 
 	@Override
 	public boolean hasAccount() throws Exception {
-		String head;
+		String head ="";
 		try {
 			head = Portal.getWebsitesTitle(getUrl());
 		} catch(IOException ex) {

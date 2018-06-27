@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class PortalFactoryTest {
 	
-	public JSONArray createReferenceJSON() {
+	public JSONArray createReferencePlainTextPortalJSON() {
 		JSONArray compare = new JSONArray();
 		JSONObject node = new JSONObject();
 		node.put("generalUrl", "https://github.com/USER");
@@ -25,13 +25,13 @@ public class PortalFactoryTest {
 	@Test
 	public void testCreateJSON() {
 		JSONArray fromFile = PortalFactory.createJSON("test.json");
-		assertTrue(fromFile.toString().equals(createReferenceJSON().toString()));
+		assertTrue(fromFile.toString().equals(createReferencePlainTextPortalJSON().toString()));
 	}
 	
 	@Test
 	public void testCreatePlainTextPortals() {
 		PortalFactory pf = new PortalFactory();
-		pf.createPlainTextPortals("me", createReferenceJSON());
+		pf.createPlainTextPortals("me", createReferencePlainTextPortalJSON());
 		
 		List<Portal> portals = pf.loadPortals("me");
 		
@@ -40,5 +40,4 @@ public class PortalFactoryTest {
 		
 		assertTrue(portals.equals(reference));
 	}
-
 }

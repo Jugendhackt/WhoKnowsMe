@@ -1,0 +1,9 @@
+[
+{ "generalUrl": "https://gitlab.com/USER",
+  "portalName": "GitLab",
+  "successCondition": "Sign in",
+  "escape": " ",
+  "with": "-"
+}
+
+]
