@@ -1,0 +1,41 @@
+body {
+	background-color: #f3f3f3;
+}
+
+* {
+	font-family: sans-serif;
+}
+
+a {
+	color: #0000EE;
+}
+
+#reloading {
+	margin: 2em;
+
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #0000EE; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button {
+	padding: 0.5em;
+	border: 0.2em solid #0000EE;
+	background-color: white;
+	color: #0000EE;
+	font-weight: bold;	
+	cursor: pointer;
+}
+
+button:active, button:hover, button:focus {
+	background-color: #0000EE;
+	color: white;
+}
