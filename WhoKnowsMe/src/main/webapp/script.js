@@ -7,7 +7,7 @@ function start() {
 	jQuery('#output').prepend(reloading);
 	
 	//2) Eingabe auslesen //wenn eingabe leer, hier abbrechen (aber ladebalken wieder entfernen)
-	var input = jQuery('#username').val();
+	var input = escape(jQuery('#username').val());
 
 	//3) Anfrage senden (findAccounts/EINGABE)
 	jQuery.getJSON('services/AccountService/serve/'+input, runRequest(input));

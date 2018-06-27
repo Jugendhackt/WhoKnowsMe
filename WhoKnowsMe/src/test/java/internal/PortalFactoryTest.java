@@ -21,6 +21,20 @@ public class PortalFactoryTest {
 		
 		return compare;
 	}
+
+	private JSONArray createReferenceEscapedTextPortalJSON() {
+		JSONArray compare = new JSONArray();
+		JSONObject node = new JSONObject();
+		node.put("generalUrl", "https://gitlab.com/USER");
+		node.put("portalName", "GitLab");
+		node.put("successCondition", "Sign in");
+		node.put("escape", " ");
+		node.put("with", "-");
+		compare.put(node);
+		
+		return compare;
+	}
+
 	
 	@Test
 	public void testCreateJSON() {
@@ -31,12 +45,25 @@ public class PortalFactoryTest {
 	@Test
 	public void testCreatePlainTextPortals() {
 		PortalFactory pf = new PortalFactory();
-		pf.createPlainTextPortals("me", createReferencePlainTextPortalJSON());
+		pf.createEscapedPlainTextPortals("me", createReferenceEscapedTextPortalJSON());
 		
 		List<Portal> portals = pf.loadPortals("me");
 		
 		List<Portal> reference = new ArrayList<Portal>();
-		reference.add(new PlainTextPortal("https://github.com/USER","me","GitHub","Page not found"));
+		reference.add(new SignEscapedPlainTextPortal("https://gitlab.com/USER","me","GitLab","Sign in"," ","-"));
+		
+		assertTrue(portals.equals(reference));
+	}
+	
+	@Test
+	public void testCreateEscapedTextPortalsWithoutEscaping() {
+		PortalFactory pf = new PortalFactory();
+		pf.createEscapedPlainTextPortals("me", createReferenceEscapedTextPortalJSON());
+		
+		List<Portal> portals = pf.loadPortals("me");
+		
+		List<Portal> reference = new ArrayList<Portal>();
+		reference.add(new PlainTextPortal("https://gitlab.com/USER","me","GitLab","Sign in"));
 		
 		assertTrue(portals.equals(reference));
 	}

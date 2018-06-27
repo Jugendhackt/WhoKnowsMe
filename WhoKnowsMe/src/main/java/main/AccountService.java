@@ -39,7 +39,7 @@ public class AccountService {
 					allAccounts.add(new Account(p.getUrl(), p.getPortalName()));
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		}
 		return allAccounts;

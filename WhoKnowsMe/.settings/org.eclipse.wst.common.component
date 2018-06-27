@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-        
-    <wb-module deploy-name="WhoKnowsMe-0.1-SNAPSHOT">
-        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/WebContent/WEB-INF/web.xml"/>
-                
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-                
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                
-        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-                
-        <property name="context-root" value="WhoKnowsMe"/>
-                
-        <property name="java-output-path" value="/WhoKnowsMe/target/classes"/>
-                
-        <property name="component.inclusion.patterns"/>
             
-    </wb-module>
     
+    <wb-module deploy-name="WhoKnowsMe-1.7">
+                
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/WebContent/WEB-INF/web.xml"/>
+                        
+        
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                        
+        
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+                        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+                        
+        
+        <property name="context-root" value="WhoKnowsMe"/>
+                        
+        
+        <property name="java-output-path" value="/WhoKnowsMe/target/classes"/>
+                        
+        
+        <property name="component.inclusion.patterns"/>
+                    
+    
+    </wb-module>
+        
+
 </project-modules>

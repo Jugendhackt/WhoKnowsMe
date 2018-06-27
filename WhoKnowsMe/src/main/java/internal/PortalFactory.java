@@ -42,7 +42,7 @@ public class PortalFactory {
 		for(Object obj : json) {
 			JSONObject jsObj = (JSONObject) obj;
 			allPortals.add(new SignEscapedPlainTextPortal(jsObj.getString("generalUrl"), accountName, jsObj.getString("portalName"), jsObj.getString("successCondition"),
-					jsObj.getString("replace"), jsObj.getString("with")));
+					jsObj.getString("escape"), jsObj.getString("with")));
 		}
 	}
 }

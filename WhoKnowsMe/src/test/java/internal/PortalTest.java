@@ -14,4 +14,12 @@ public class PortalTest {
 		assertTrue(title.equals("Example Domain"));
 	}
 
+	@Test
+	public void testEquals() {
+		Portal ptp = new PlainTextPortal("https://site/USER","me","Site","not found");
+		Portal septp = new SignEscapedPlainTextPortal("https://site/USER","ae","Site","not found", "a","m");
+
+		assertTrue(ptp.equals(septp));
+	}
+	
 }
