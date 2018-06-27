@@ -23,7 +23,7 @@ Run the command `sudo apt install default-jdk`.
 
 ### 2. Install tomcat
 
-Figure out which tomcat is the most actual version. [which-version site](https://tomcat.apache.org/whichversion.html)
+Figure out which tomcat is the most actual version. Look for it on the official [which-version site](https://tomcat.apache.org/whichversion.html).
 The project is written in Java 8, so this Java version has to be supported.
 
 Run the command `sudo service install tomcat8 tomcat8-admin`.
@@ -50,9 +50,9 @@ Add the following lines above the closing `</tomcat-users>` tag:
 3. Visit [the tomcat manager page](localhost:8080/manager).
 Move to the tab `List Applications`. Scroll down until `Deploy > WAR file to deploy`. Select a war file. (The one you downloaded before.) Deploy it. (Using the "deploy"-button.)
 
-## How to use
+# 2 How to use
 
-### In general
+## In general
 
 1. Open a browser
 2. Visit the sites url
@@ -61,7 +61,7 @@ Move to the tab `List Applications`. Scroll down until `Deploy > WAR file to dep
 5. Click on "Who knows me?"
 6. Enjoy the answer!
 
-### How to find the right URL?
+## How to find the right URL?
 
 If you followed the "Deploy the .war file" tutorial…
 
