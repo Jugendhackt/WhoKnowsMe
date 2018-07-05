@@ -4,28 +4,27 @@
 	<meta charset="UTF-8" />
 	<title>Who knows me?</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
 	<header>
-		<a><h1>Who knows me?</h1></a>
-		<p>Type your (nick)name below, we'll tell you where still have accounts!</p>
+		<h1>Who knows me?</h1>
+		<p>Type in your (nick)name below, we'll tell you may still have accounts!</p>
 	</header>
 
-	<main>
-		<section id="input">
-			<label id="nameLabel" for="username">Your (nick)name:
+	<div>
+		<div id="input">
+			<p id="nameLabel" for="username">Your (nick)name:
 				<input id="username" autofocus />
-			</label>
+			</p>
 
-			<button type="button" id="submit">Who knows me?</button>
-		</section>
+			<button id="submit" onclick="submitClick();">Who knows me?</button>
+		</div>
 
-		<section id="output">
-		</section>
-	</main>
+		<div id="output">
+		</div>
+	</div>
 </body>
 
 </html>

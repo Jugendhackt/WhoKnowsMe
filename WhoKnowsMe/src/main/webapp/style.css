@@ -6,7 +6,7 @@ body {
 	font-family: sans-serif;
 }
 
-a {
+h1 {
 	color: #0000EE;
 }
 
@@ -27,15 +27,32 @@ a {
 }
 
 button {
-	padding: 0.5em;
+	padding: 5px;
 	border: 0.2em solid #0000EE;
+	border-radius: 2px;
 	background-color: white;
 	color: #0000EE;
 	font-weight: bold;	
 	cursor: pointer;
+
+	transition: all 0.2s;
 }
 
-button:active, button:hover, button:focus {
+input {
+	padding: 5px
+}
+
+#input {
+	padding-bottom: 5px;
+	border-bottom: 2px gray solid;
+}
+
+button:active {
+	background-color: #000088 !important;
+	border-color: #000088 !important;
+}
+
+button:hover {
 	background-color: #0000EE;
 	color: white;
 }
